@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.series-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-gap: 1rem;
+}
+
+.series-item img {
+  width: 100%;  
+}
+
+.customButton{
+  width: 100%;
+}
+
+.customDis {  
+  display: grid;
+  justify-content: center;
+}

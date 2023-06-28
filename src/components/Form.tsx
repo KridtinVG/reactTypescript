@@ -31,7 +31,7 @@ const Form: FC<Props> = ({ seriesList, setSeriesList }) => {
     }
 
     const handleClick = (event: MouseEvent<HTMLInputElement>) => {
-        if (!name && !genre && !cover && !imdb && !seasons) {
+        if (!name || !genre || !cover && !imdb || seasons==0) {
             alert("Please enter series info!");
             return;
         }
@@ -52,23 +52,31 @@ const Form: FC<Props> = ({ seriesList, setSeriesList }) => {
     }
 
   return (
-    <div>
-      <h1>Form</h1>
-      <div className="form-container">
+    <div className='card customDis'>
+      <div className="form-conntainer">
         <div className="form-div">
             <label htmlFor="name">Name</label>
-            <input type='text' name="name" value={name} onChange={setNameinputHandler}></input>
-            <label htmlFor="genre">Genre</label>
-            <input type='text' name="genre" value={genre} onChange={setGenreinputHandler}></input>
-            <label htmlFor="cover">Cover</label>
-            <input type='text' name="cover" value={cover} onChange={setCoverinputHandler}></input>
-            <label htmlFor="imdb">IMDB</label>
-            <input type='number' name="imdb" value={imdb} onChange={setImdbinputHandler}></input>
-            <label htmlFor="seasons">Seasons</label>
-            <input type='number' name="seasons" value={seasons} onChange={setSeasonsinputHandler}></input>
-            <button type='button' onClick={handleClick as React.MouseEventHandler<HTMLButtonElement>}>Add Series</button>
+            <input type='text' className='form-control' name="name" value={name} onChange={setNameinputHandler}></input>
         </div>
-    </div>
+        <div>
+            <label htmlFor="genre">Genre</label>
+            <input type='text' className='form-control' name="genre" value={genre} onChange={setGenreinputHandler}></input>
+            </div>
+        <div>
+            <label htmlFor="cover">Cover</label>
+            <input type='text' className='form-control' name="cover" value={cover} onChange={setCoverinputHandler}></input>
+            </div>
+        <div>
+            <label htmlFor="imdb">IMDB</label>
+            <input type='number' min={0} className='form-control' aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="imdb" value={imdb} onChange={setImdbinputHandler}></input>
+            </div>
+        <div>
+            <label htmlFor="seasons">Seasons</label>
+            <input type='number' min={0} className='form-control' name="seasons" value={seasons} onChange={setSeasonsinputHandler}></input>
+            </div>
+            <button type='button' className='customButton' onClick={handleClick as React.MouseEventHandler<HTMLButtonElement>}>Add Series</button>
+        </div>
+
     </div>
   )
 }
