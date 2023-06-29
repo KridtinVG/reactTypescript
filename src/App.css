@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url(https://cdn.pixabay.com/photo/2019/09/18/07/09/meadow-4485609_1280.jpg);
+  background-size: cover;
 }
 
 .App-logo {
@@ -41,17 +43,45 @@
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   grid-gap: 1rem;
+  margin-inline: 15%;
 }
 
 .series-item img {
-  width: 100%;  
+  width: 100%; 
+  margin-top: 15%; 
 }
 
 .customButton{
   width: 100%;
+  height: 50px;
+  font-size: large;
+  font-weight: bold;
 }
 
 .customDis {  
   display: grid;
   justify-content: center;
+  background-color: #bfffb765;
+  margin-inline: 30%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  border-radius: 25px;
+}
+
+.box-button{
+  margin-top: 20%;
+}
+
+.box-text-list{
+  background-color: antiquewhite;
+  min-height: 180px;
+  padding-top: 1rem;
+}
+
+.box-text-list p{
+  font-size: 16px;
+}
+
+.box-input{
+  margin-top: 5%;
 }

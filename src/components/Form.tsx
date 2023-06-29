@@ -53,28 +53,32 @@ const Form: FC<Props> = ({ seriesList, setSeriesList }) => {
 
   return (
     <div className='card customDis'>
+    <h1>My favourite tv series</h1>
       <div className="form-conntainer">
-        <div className="form-div">
+        <div className="box-input">
             <label htmlFor="name">Name</label>
             <input type='text' className='form-control' name="name" value={name} onChange={setNameinputHandler}></input>
         </div>
-        <div>
+        <div className="box-input">
             <label htmlFor="genre">Genre</label>
             <input type='text' className='form-control' name="genre" value={genre} onChange={setGenreinputHandler}></input>
             </div>
-        <div>
+        <div className="box-input">
             <label htmlFor="cover">Cover</label>
             <input type='text' className='form-control' name="cover" value={cover} onChange={setCoverinputHandler}></input>
             </div>
-        <div>
+        <div className="box-input">
             <label htmlFor="imdb">IMDB</label>
             <input type='number' min={0} className='form-control' aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="imdb" value={imdb} onChange={setImdbinputHandler}></input>
             </div>
-        <div>
+        <div className="box-input">
             <label htmlFor="seasons">Seasons</label>
             <input type='number' min={0} className='form-control' name="seasons" value={seasons} onChange={setSeasonsinputHandler}></input>
             </div>
-            <button type='button' className='customButton' onClick={handleClick as React.MouseEventHandler<HTMLButtonElement>}>Add Series</button>
+            <div className='box-button'>
+            <button type='button' className='btn btn-success customButton' onClick={handleClick as React.MouseEventHandler<HTMLButtonElement>}>Add Series</button>
+            </div>
+            
         </div>
 
     </div>

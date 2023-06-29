@@ -10,7 +10,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My favourite tv series</h1>
       <Form seriesList={seriesList} setSeriesList={setSeriesList}/>
       <List seriesList={seriesList}/>
     </div>
